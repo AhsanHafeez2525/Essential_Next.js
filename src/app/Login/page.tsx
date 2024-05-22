@@ -3,11 +3,21 @@ import { IoSearchOutline } from "react-icons/io5";
 import Custom from "../custom.module.css";
 import Image from "next/image";
 import VercelLogo from "../../../public/vercel.svg";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  weight: "100",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const Login = () => {
   return (
     <div>
-      <h1>Welcome to login page</h1>
+      <h1 style={{ fontFamily: "Poppins", fontWeight: 300 }}>
+        Welcome to login page
+      </h1>
+      <h2 className={roboto.className}>Welcomt to login page roboto</h2>
       <h2 className={Custom.main}>you reach on</h2>
       <div>
         <IoSearchOutline size={20} />
